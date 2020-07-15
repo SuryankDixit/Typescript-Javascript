@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/SuryankDixit/Typescript#readme",
   "devDependencies": {
+    "@types/node": "^14.0.23",
     "typescript": "^3.9.6"
   }
 }

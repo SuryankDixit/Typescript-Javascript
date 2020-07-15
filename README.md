@@ -9,3 +9,6 @@ Practice of typescript.
         Modules that are written in JS and you want to include them in TS project , then install packages using @types to have the type information.
 > ###### npm i ts-node-dev --save-dev:
         It restarts target node process when any of required files changes (as standard node-dev) but shares Typescript compilation process between restarts. 
+> ###### "scripts": {
+        "start": "ts-node-dev --respawn --transpile-only server.ts".
+        this script restarts the server as soon as you save your file.

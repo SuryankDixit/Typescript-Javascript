@@ -1,0 +1,33 @@
+0.Global Execution context:
+        phase 1=> memory allocation phase in VARIABLE ENVIRONMENT
+        phase 2=> execution phase
+        
+    Global execution context is pushed in stack.
+
+1. Hoisting:
+    -JavaScript Hoisting refers to the process whereby the compiler 
+     allocates memory for variable and function declarations prior 
+     to execution of the code.
+    -Declarations that are made using var are initialized with a 
+     default value of undefined. 
+    -Declarations made using let and const are not initialized as 
+     part of hoisting.
+
+2. JS engine: (in global space=> anything which is not inside function)
+    pushes GEC in stack
+    creates global object called Window
+    creates this which points to window object( this === window) (in case of browser)
+    chrome has V8 engine
+    every variable and function created in global space is attached to window space 
+
+3. undefined vs not defined:
+
+4. Scope chain -> Lexical Environment 
+    Scope: where you can access a certain variable in a program;
+    Lexical Environment:
+        Lexical : in order, in hierarchy, where that code is present physically
+        Whenever GEC is created, a Lexical enbironment is also created;
+        Lexical environment is the  ( local memory + the lexical environment of its parent)
+        each local lexical environment has a reference to the lexical envt. of parent
+
+         

@@ -29,6 +29,8 @@ AJAX : asynchronous js and xml;
 
 fetch('https://swapi.dev/api/planets/')
     .then(function (response) {
+        // fetch does not reject promise if the status code is 404 or 500 types;
+        // that is why we are checking manually here;
         if (!response.ok) throw new Error(`Status Code Error: ${response.status}`);
         else return response.json();
     })

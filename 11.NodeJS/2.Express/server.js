@@ -7,13 +7,18 @@ const app = express();  // instance of server;
 
 // intermediate action on request
 // it will parse the body of the request if it is in urlencoded format
-app.use(express.urlencoded({ extended: true }))
+app.use(express.urlencoded({ extended: true }));
+
+// sets certain properties inside your application
+// view engine is one of the default properties that express has
+app.set('view engine', 'hbs');
 
 
 app.get('/', (req, res) => {
     // console.log(req.headers);
-    console.log(req.query);
-    res.send('Hello World');
+    // console.log(req.query);
+    // res.send('Hello World');
+    res.render('home', { title: 'Todo List' });
 });
 
 app.get('/greet', (req, res) => {
@@ -33,6 +38,12 @@ app.post('/greet', (req, res) => {
 app.get('/form', (req, res) => {
     res.sendFile(__dirname + '/files/form.html');
 })
+
+// variable path parameter
+app.get('/:city/welcome', (req, res) => {
+    res.send("Welcome to " + req.params.city + " city");
+})
+
 
 
 app.listen(5555, () => {

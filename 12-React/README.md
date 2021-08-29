@@ -1,0 +1,52 @@
+- Component Based Architecture.
+    - Reusable code
+- React is declarative not Imperative
+    - tell react what you want and react will build UI
+- In index.js: 
+    - The app component is rendered inside the root DOM node.
+    - Everything inside root will be controlled by react.
+    - App component represents the view that we see in browser
+- Component is basically just the code inside js and jsx file and describes a part of user interface 
+- 2 Component Types:
+    - Stateless Functional Component
+        - absence of this keyword.
+        - solution without using state
+        - React 16.7.0-alpha -> hooks
+        - hooks lets you use states without classes. 
+    - Stateful Class Components
+        - Class extending component class
+        - Render method returning html.
+        - can maintain a private internal state.
+        - provide lifecycle hooks.
+        - Stateful
+    - both can receive props as an parameter and returns jsx.
+- Export keyword
+    - export default
+    - export function (name export)
+        - in this , we have to to use the same function name as of js file
+- JSX (JavaScript XML)
+    - contains tags, attributes and children.
+    - Transpiles to JS which is understood by browsers.
+    - React.createElement(arg1,arg2,arg3)
+    - That's why we import React from react
+    - Wrap all elemnts in a hierarchy of parent and child
+- Properties (props)
+    - optional input that components can accept
+    - it is an object.
+    - {props.anyKey}
+    - props are immutable.
+- State
+    - an object privately maintained in an component
+    - constructor(){super();this.state={}}
+- props vs state
+    - 
+        - props get passed to the component
+        - state is managed within the component
+    - 
+        - props are immutable
+        - state can be changed
+    - 
+        - props, this.props
+        - useState Hooks, this.state
+
+

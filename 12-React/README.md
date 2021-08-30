@@ -37,7 +37,11 @@
     - props are immutable.
 - State
     - an object privately maintained in an component
-    - constructor(){super();this.state={}}
+    - constructor(){super();this.state={.. : ..}}
+    - always manipulate states using setState method and never modify the state directly.
+        - this.setState({.. : ..},callback)
+    - Rather than passing objects inside setState method , use Function inside setState based on prevState and manipulate that state. Example in Counter.js
+    - Calls to setState({.. : ::}) are asynchronous;
 - props vs state
     - 
         - props get passed to the component
@@ -48,5 +52,10 @@
     - 
         - props, this.props
         - useState Hooks, this.state
+- Binding event handlers
+    - event binding is the result of different behaviour of this pointer
+    - keep in mind, this keyword is undefined in an event handler and that is the reason that wevent bindinding is necessary in class component.
+    - First of all "this" keyword points the Parent element on which it is called . So when you use a Named function with the "this" keyword inside it  , it isn't binded to anything at all ..So the control passes to the "Window" element . So the Window element acts as a parent to the Named function . We see "Undefined" here because we use "Strict mode " in Javascript . What Strict Mode does is, if there is a named function( without any Bind method ) it transfers control to the parent element(window element) as i said ..this action is blocked by the strict mode ..So you see "undefined" in there ...However if you take off the strict mode ,you should see it will return the Window object ... The One Stop Solution to all of this is using arrow functions which takes parent element as the Class and not the window object.
+    - Unlike regular functions, arrow functions do not have their own this. The value of this inside an arrow function remains the same throughout the lifecycle of the function and is always bound to the value of this in the closest non-arrow parent function.
 
 

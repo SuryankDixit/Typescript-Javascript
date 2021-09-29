@@ -25,11 +25,8 @@ axios.get(url)
     const title = todo.Title;
     const finished = todo.Completed;
     */
-  
-    const id = todo.id;
-    const title = todo.title;
-    const finished = todo.completed;
-    logTodo(id,title,finished);
+    const {id,title,completed} = todo;
+    logTodo(id,title,completed);
   });
 
   // type annotation;

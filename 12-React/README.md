@@ -41,7 +41,7 @@
     - always manipulate states using setState method and never modify the state directly.
         - this.setState({.. : ..},callback)
     - Rather than passing objects inside setState method , use Function inside setState based on prevState and manipulate that state. Example in Counter.js
-    - Calls to setState({.. : ::}) are asynchronous;
+    - Calls to setState({.. : ::}) are asynchronous.
 - props vs state
     - 
         - props get passed to the component

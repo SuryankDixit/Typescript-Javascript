@@ -23,9 +23,10 @@ mysql>
 ```
 ```sql
 use mytestdb;
-create table test1 ( id INTEGER PRIMARY KEY, data VARCHAR(40));
+create table test1 ( id INTEGER PRIMARY KEY AUTO_INCREMENT, data VARCHAR(40));
 show tables;
 insert into test1 values(1,'aaaaaa');
+insert into test1 (data) values ('bbb');
 select * from test1;
 ```
 
